@@ -1,0 +1,332 @@
+:root {
+    --primary-color: #33c9b7;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #888;
+    --border-color: #ddd;
+    --border-radius: 4px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.signup-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    overflow: hidden;
+}
+
+.logo-section {
+    flex: 1;
+    background-color: #f0fafa;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures content doesn't overflow the rounded container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #f7cb07, #33c9b7, #5c7cfa, #f7cb07);
+    background-size: 300% 300%;
+    animation: gradient 8s ease infinite;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Makes sure the image itself is also rounded */
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.description {
+    color: #666;
+    max-width: 350px;
+}
+
+.form-container {
+    flex: 1.5;
+    padding: 40px;
+    background-color: white;
+}
+
+form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder, select::placeholder {
+    color: #aaa;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #888;
+    pointer-events: none;
+}
+
+.date-input-container {
+    position: relative;
+}
+
+.calendar-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+.register-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.register-btn:hover {
+    background-color: #2bb6a5;
+}
+
+.terms-text {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+.terms-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles for 580x679 */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+        max-width: 500px;
+    }
+    
+    .logo-section {
+        padding: 30px 20px;
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Responsive styles for very small screens (295x48) */
+@media (max-width: 320px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .signup-container {
+        box-shadow: none;
+    }
+    
+    .logo-section {
+        padding: 20px 15px;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    .description {
+        font-size: 13px;
+    }
+    
+    .form-container {
+        padding: 20px 15px;
+    }
+    
+    label {
+        font-size: 13px;
+    }
+    
+    input, select {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    .register-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .terms-text {
+        font-size: 11px;
+    }
+}
+
+/* Special case for extremely narrow screens (295x48) */
+@media (max-width: 320px) and (max-height: 100px) {
+    .signup-container {
+        flex-direction: row;
+    }
+    
+    .logo-section {
+        display: none; /* Hide logo section on extremely small screens */
+    }
+    
+    .form-container {
+        width: 100%;
+    }
+    
+    .form-row {
+        margin-bottom: 8px;
+    }
+    
+    input, select {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    .register-btn {
+        padding: 6px;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .terms-text {
+        font-size: 9px;
+    }
+}

@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    border:solid 1em white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.header {
+    background-color: #ff0080;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    position: relative;
+    top: -30px;
+    right: 10px;
+    width: 100%;
+}
