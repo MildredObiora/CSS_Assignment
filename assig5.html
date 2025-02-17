@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP Pusher Checkout</title>
+    <link rel="stylesheet" href="./assig5.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="/api/placeholder/40/40" alt="WP Pusher Logo" />
+                <span>WP Pusher</span>
+            </div>
+            <nav class="nav">
+                <a href="#">Download</a>
+                <a href="#">Learn more</a>
+                <a href="#">Pricing</a>
+                <a href="#">Help</a>
+                <a href="#" class="account">Account</a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <div class="checkout-form">
+                <h1 class="checkout-title">Checkout</h1>
+                
+                <div class="form-step">
+                    <h2 class="step-title">
+                        <span class="step-number">1</span>
+                        Your Basic Information
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" class="form-control" placeholder="Jane">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" class="form-control" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" class="form-control" placeholder="janedoe@example.com">
+                    </div>
+                </div>
+                
+                <div class="form-step">
+                    <h2 class="step-title">
+                        <span class="step-number">2</span>
+                        Your Payment Information
+                    </h2>
+                    <div class="form-group">
+                        <label for="creditCard">Credit Card</label>
+                        <input type="text" id="creditCard" class="form-control" placeholder="Card Number">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="MM / YY">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="CVC">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="buy-button">Buy WP Pusher</button>
+                
+                <div class="help-text">
+                    <i>?</i>
+                    Need any help? Don't hesitate to contact support!
+                </div>
+                
+                <div class="powered-by">
+                    <span>Powered by</span> 
+                    <img src="/api/placeholder/60/20" alt="Stripe">
+                </div>
+            </div>
+
+            <div class="pricing-sidebar">
+                <div class="plan-name">Freelancer</div>
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">99</span>
+                    <span class="period">/ year</span>
+                </div>
+                <div class="renew-text">Automatically renews after 1 year</div>
+                
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        Use on 5 client sites
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        Private repositories
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        Email support
+                    </li>
+                </ul>
+                
+                <div class="upgrade-text">
+                    Need 20 client sites? 
+                    <a href="#" class="upgrade-link">Switch to the Agency plan</a>
+                </div>
+                
+                <div class="testimonial">
+                    FTP is horrible to deal with. WP Pusher solves that issue, and the customer support is awesome!
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <span class="author-name">Kirk Beard</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            © 2018 WP Pusher IVS · <a href="#">Terms of Service</a>
+        </footer>
+    </div>
+</body>
+</html>
